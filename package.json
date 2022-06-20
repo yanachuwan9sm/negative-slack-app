@@ -1,0 +1,41 @@
+{
+  "name": "code_reviewer_select_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.10.0",
+    "@slack/web-api": "^6.0.0",
+    "dotenv": "^16.0.0",
+    "jsx-slack": "^4.6.0",
+    "source-map-support": "^0.5.20",
+    "typescript": "^4.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "7.0.4",
+    "lint-staged": "13.0.1",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.0.0"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "build:ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix": "npm run format && npm run lint:fix",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './src/**/*.{ts,tsx}'"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run fix"
+    ]
+  }
+}

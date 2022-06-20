@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "es2020",
+      "module": "commonjs",
+
+      "sourceMap": true,
+      "outDir": "./lib",
+      "strict": true,
+
+      "declaration": true, // true => コンパイルしたtsファイルの中でexportしているもの全ての型定義ファイルをファイルごとに作成 
+      "removeComments": true, // コンパイル対象のファイル上のコメントを削除
+      "noUnusedLocals": true,  
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "esModuleInterop": true,
+
+      "jsx": "react-jsx",
+      "jsxImportSource": "jsx-slack",
+      
+      "typeRoots": ["src/types", "node_modules/@types"]
+
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
