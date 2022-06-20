@@ -4,7 +4,7 @@
       "module": "commonjs",
 
       "sourceMap": true,
-      "outDir": "./lib",
+      "outDir": "./dist",
       "strict": true,
 
       "declaration": true, // true => コンパイルしたtsファイルの中でexportしているもの全ての型定義ファイルをファイルごとに作成 

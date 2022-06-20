@@ -25,9 +25,8 @@
     "ts-node": "^10.0.0"
   },
   "scripts": {
-    "start": "node lib/index.js",
-    "build": "build:ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon",
+    "build": "tsc",
     "fix": "npm run format && npm run lint:fix",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix",
