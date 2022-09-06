@@ -1,15 +1,14 @@
 {
-  "name": "code_reviewer_select_app",
+  "name": "slack_negative_bot",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": "16.x"
-  },
   "dependencies": {
+    "@google-cloud/language": "^5.0.0",
     "@slack/bolt": "^3.10.0",
     "@slack/web-api": "^6.0.0",
     "dotenv": "^16.0.0",
     "jsx-slack": "^4.6.0",
+    "nodemon": "^2.0.19",
     "source-map-support": "^0.5.20",
     "typescript": "^4.0.0"
   },
@@ -20,13 +19,14 @@
     "eslint-config-prettier": "^8.5.0",
     "husky": "7.0.4",
     "lint-staged": "13.0.1",
-    "nodemon": "^2.0.15",
     "prettier": "^2.6.2",
     "ts-node": "^10.0.0"
   },
   "scripts": {
-    "dev" : "nodemon",
+    "dev": "nodemon",
     "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "node dist/index.js",
     "fix": "npm run format && npm run lint:fix",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix",
